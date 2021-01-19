@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.main{
+    width: calc(100%-40px);
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container{
+
+    padding: 15px;
+    margin: 20px auto;
+    width: calc(100%-40px);
+    text-align: center;
+    align-content: center;
+    background-image: radial-gradient(#EBA44F, #C88B42,#825929);
+}
+
+.word{
+    display: inline-block;
+    border: 1px solid black;
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 10px;
+}
+
+.add_text{
+    height: 60px;
+}
+
+button{
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+h1, h2{
+    padding: 15px;
+}
+
+p{
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}

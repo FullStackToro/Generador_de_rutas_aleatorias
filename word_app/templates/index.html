@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+         {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="main">
+
+    <h1 id="title">PALABRAS ALEATORIAS</h1><hr>
+
+    <div class="container">
+
+        <h2> Random Word (Intento # {{ request.session.counter }})</h2>
+
+        <p>Esta aplicación mostrará una plantilla con una "palabra" aleatoria de 14 caracteres que también muestra un contador para la cantidad de palabras generadas.
+        Haz 'Click' en el botón Generar para recibir una palabra aleatorea.</p>
+
+        <div class="formulario">
+
+
+            <form action="random" method="post" id="form1">    <!--Action se utiliza para asignar la ruta a la cual nos redirige.-->
+                {% csrf_token %}
+
+                <input class="word" type="text" value='{{ palabra }}' id="inpt1" form="form1"><br>
+                <button type="submit" id="btn1" form="form1"> Generar </button>
+                <button type="submit" id="btn2" form="form2"> Reiniciar </button>
+            </form>
+
+
+            <form action="/" method="post" id="form2">    <!--Action se utiliza para asignar la ruta a la cual nos redirige.-->
+                {% csrf_token %}
+            </form>
+
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
